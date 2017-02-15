@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Layers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+</head>
+<body>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+    }
+    body {
+      transform-style: preserve-3d;
+      transform: perspective(800px);
+      background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .layers {
+      width: 600px;
+      height: 400px;
+      margin: 60px;
+    }
+
+    .wrapper {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255,255,255,.08);
+    }
+    
+    .border {
+      position: absolute !important;
+      top: 35px;
+      right: 35px;
+      bottom: 35px;
+      left: 35px;
+      border: 3px solid white;
+    }
+
+    .orb {
+      position: absolute !important;
+      border-radius: 50%;
+      background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    }
+
+    .orb-size-1 {
+      width: 20px;
+      height: 20px;
+      bottom: 10px;
+      right: 80px;
+    }
+
+    .orb-size-2 {
+      width: 50px;
+      height: 50px;
+      top: 60px;
+      left: 40px;
+    }
+
+    .orb-size-3 {
+      width: 70px;
+      height: 70px;
+      right: 110px;
+      bottom: 25px;
+    }
+
+    .orb-size-4 {
+      width: 170px;
+      height: 170px;
+      right: 8px;
+      top: 50px;
+      z-index: 1;
+    }
+
+    .text {
+      font-family: 'avenir', 'avenir next', 'helvetica', sans-serif;
+      color: white;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1;
+      padding: 0;
+      margin: 0;
+    }
+
+    .text-large {
+      font-size: 90px;
+      padding-top: 130px;
+      font-weight: 900;
+    }
+
+    .text-small {
+      font-size: 30px;
+      padding-top: 10px;
+      font-weight: 400;
+    }
+
+    .text-tiny {
+      font-size: 16px;
+      padding-top: 10px;
+      font-weight: 400;
+    }
+  </style>
+
+    <div class="layers">
+      <div class="wrapper">
+        <div data-level="7" class="layer orb orb-size-1"></div>
+        <div data-level="9" class="layer orb orb-size-4"></div>
+        <div data-level="5" class="layer orb orb-size-2"></div>
+        <div data-level="2" class="layer border"></div>
+        <div data-level="0" class="layer orb orb-size-3"></div>
+        <h1 data-level="4" class="layer text text-large">layers</h1>  
+        <h3 data-level="3" class="layer text text-small">upon layers</h3>  
+        <h3 data-level="2" class="layer text text-tiny">upon layers</h3>  
+      </div>
+    </div>
+    <script src="../dist/index.js"></script>
+    <script src="example.js"></script>
+</body>
+</html>
