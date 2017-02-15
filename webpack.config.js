@@ -18,7 +18,7 @@ var output = isTest
   : {
     path: './dist',
     filename: 'index.js',
-    libraryTarget: 'var',
+    libraryTarget: 'umd',
     library: 'Layers'
   };
 module.exports = {
