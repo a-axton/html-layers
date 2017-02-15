@@ -16,7 +16,7 @@ var output = isTest
     filename: 'tests.js'
   } 
   : {
-    path: './dist',
+    path: './docs',
     filename: 'index.js',
     libraryTarget: 'umd',
     library: 'Layers'
